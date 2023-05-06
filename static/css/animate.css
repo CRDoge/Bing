@@ -1,0 +1,475 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/********************************************************************************/
+@keyframes bounceIn {
+ 0%,  100%,  20%,  40%,  60%,  80% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: scale3d(0.3, 0.3, 0.3);
+}
+ 20% {
+ opacity: 0.3;
+ transform: scale3d(1.1, 1.1, 1.1);
+}
+ 40% {
+ opacity: 0.6;
+ transform: scale3d(0.9, 0.9, 0.9);
+}
+ 60% {
+ opacity: 0.9;
+ transform: scale3d(1.03, 1.03, 1.03);
+}
+ 80% {
+ opacity: 1;
+ transform: scale3d(0.97, 0.97, 0.97);
+}
+ 100% {
+ opacity: 1;
+ transform: scale3d(1, 1, 1);
+}
+}
+@keyframes bounceOut {
+ 0%,  100%,  20%,  40%,  60%,  80% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 1;
+ transform: scale3d(1, 1, 1);
+}
+ 20% {
+ opacity: 1;
+ transform: scale3d(0.97, 0.97, 0.97);
+}
+ 40% {
+ opacity: 0.9;
+ transform: scale3d(1.03, 1.03, 1.03);
+}
+ 60% {
+ opacity: 0.6;
+ transform: scale3d(0.9, 0.9, 0.9);
+}
+ 80% {
+ opacity: 0.3;
+ transform: scale3d(1.1, 1.1, 1.1);
+}
+ 100% {
+ opacity: 0;
+ transform: scale3d(0.3, 0.3, 0.3);
+}
+}
+@keyframes bounceInUp {
+ 0%,  100%,  60%,  75%,  90% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, 3000px, 0);
+}
+ 60% {
+ opacity: 1;
+ transform: translate3d(0, -20px, 0);
+}
+ 75% {
+ opacity: 1;
+ transform: translate3d(0, 10px, 0);
+}
+ 90% {
+ opacity: 1;
+ transform: translate3d(0, -5px, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: translate3d(0, 0, 0);
+}
+}
+@keyframes bounceInLeft {
+ 0%,  100%,  60%,  75%,  90% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: translate3d(-3000px, 0, 0);
+}
+ 60% {
+ opacity: 1;
+ transform: translate3d(25px, 0, 0);
+}
+ 75% {
+ opacity: 1;
+ transform: translate3d(-10px, 0, 0);
+}
+ 90% {
+ opacity: 1;
+ transform: translate3d(5px, 0, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes bounceInUp {
+ 0%,  100%,  60%,  75%,  90% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, 3000px, 0);
+}
+ 60% {
+ opacity: 1;
+ transform: translate3d(0, -20px, 0);
+}
+ 75% {
+ transform: translate3d(0, 10px, 0);
+ opacity: 1;
+}
+ 90% {
+ transform: translate3d(0, -5px, 0);
+ opacity: 1;
+}
+ 100% {
+ transform: translate3d(0, 0, 0);
+ opacity: 1;
+}
+}
+@keyframes bounceInRight {
+ 0%,  100%,  60%,  75%,  90% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: translate3d(3000px, 0, 0);
+}
+ 60% {
+ opacity: 1;
+ transform: translate3d(-25px, 0, 0);
+}
+ 75% {
+ opacity: 1;
+ transform: translate3d(10px, 0, 0);
+}
+ 90% {
+ opacity: 1;
+ transform: translate3d(-5px, 0, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes fadeInDown {
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, -100%, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes fadeInUp {
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, 100%, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes rotateScaleIn {
+ 0% {
+ opacity: 0;
+ transform: scale(0) rotate(-360deg);
+}
+ 100% {
+ opacity: 1;
+ transform: scale(1) rotate(0);
+}
+}
+@keyframes fadeIn {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes rotateIn {
+ 0% {
+ transform-origin: center;
+ transform: rotate3d(0, 0, 1, -200deg);
+ opacity: 0;
+}
+ 100% {
+ transform-origin: center;
+ transform: none;
+ opacity: 1;
+}
+}
+@keyframes bounceInDown {
+ 0%,  100%,  60%,  75%,  90% {
+ transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, -3000px, 0);
+}
+ 60% {
+ opacity: 1;
+ transform: translate3d(0, 25px, 0);
+}
+ 75% {
+ opacity: 1;
+ transform: translate3d(0, -10px, 0);
+}
+ 90% {
+ opacity: 1;
+ transform: translate3d(0, 5px, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes rollIn {
+ 0% {
+ opacity: 0;
+ transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+@keyframes zoomIn {
+ 0% {
+ opacity: 0;
+ transform: scale3d(0.3, 0.3, 0.3);
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes zoomInUp {
+ 0% {
+ opacity: 0;
+ transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+ animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+ 60% {
+ opacity: 1;
+ transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+ animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+}
+@keyframes slideInRight {
+ from {
+ transform: translate3d(100%, 0, 0);
+ visibility: visible;
+}
+ to {
+ transform: translate3d(0, 0, 0);
+}
+}
+@keyframes zoomInLeft {
+ from {
+ opacity: 0;
+ transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+ animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+ 60% {
+ opacity: 1;
+ transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+ animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+}
+@keyframes zoomInRight {
+ from {
+ opacity: 0;
+ transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+ animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+ 60% {
+ opacity: 1;
+ transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+ animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+}
+@keyframes topLoop {
+ 0% {
+ transform: translateY(100px);
+ opacity: 0;
+}
+ 100% {
+ transform: translateY(0);
+ opacity: 1;
+}
+}
+@keyframes leftLoop {
+ 0% {
+ transform: translateX(-200px);
+ opacity: 0;
+}
+ 100% {
+ transform: translateX(0);
+ opacity: 1;
+}
+}
+@keyframes rightLoop {
+ 0% {
+ transform: translateX(200px);
+ opacity: 0;
+}
+ 100% {
+ transform: translateX(0);
+ opacity: 1;
+}
+}
+@keyframes bottomLoop {
+ 0% {
+ transform: translateY(-200px);
+ opacity: 0;
+}
+ 100% {
+ transform: translateY(0);
+ opacity: 1;
+}
+}
+@keyframes enLarge {
+ 0% {
+ transform: scale(0.3);
+}
+ 50% {
+ transform: scale(1.05);
+}
+ 70% {
+ transform: scale(0.9);
+}
+ 100% {
+ transform: scale(1);
+}
+}
+@keyframes rotateYIn {
+ from {
+ transform: rotateY(90deg);
+ opacity: 0;
+}
+ to {
+ transform: rotateY(0);
+ opacity: 1;
+}
+}
+@keyframes slideDown {
+ from {
+ height: 0;
+}
+ to {
+ height: 100%;
+}
+}
+.bounceIn {
+    animation: bounceIn 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.bounceOut {
+    animation: bounceOut 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.bounceInUp {
+    animation: bounceInUp 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.bounceInLeft {
+    animation: bounceInLeft 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.bounceInRight {
+    animation: bounceInRight 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.bounceInDown {
+    animation: bounceInDown 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.fadeInDown {
+    animation: fadeInDown 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.fadeInUp {
+    animation: fadeInUp 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.rotateScaleIn {
+    animation: rotateScaleIn 1.2s ease;
+    animation-fill-mode: forwards;
+}
+.fadeIn {
+    animation: fadeIn 1.6s ease;
+    animation-fill-mode: forwards;
+}
+.rotateIn {
+    animation: rotateIn 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.rollIn {
+    animation: rollIn 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.zoomIn {
+    animation: zoomIn 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.zoomInUp {
+    animation: zoomInUp 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.slideInRight {
+    animation: slideInRight 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.zoomInLeft {
+    animation: zoomInLeft 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.zoomInRight {
+    animation: zoomInRight 0.8s ease;
+    animation-fill-mode: forwards;
+}
+.topLoop {
+    animation: topLoop 1s ease;
+    animation-fill-mode: forwards;
+}
+.leftLoop {
+    animation: leftLoop 1s ease;
+    animation-fill-mode: forwards;
+}
+.rightLoop {
+    animation: rightLoop 1s ease;
+    animation-fill-mode: forwards;
+}
+.bottomLoop {
+    animation: bottomLoop 1s ease;
+    animation-fill-mode: forwards;
+}
+.enLarge {
+    animation: enLarge 1s ease;
+    animation-fill-mode: forwards;
+}
+.rotateYIn {
+    animation: rotateYIn 1.6s ease;
+    animation-fill-mode: forwards;
+}
+.slideDown {
+    animation: slideDown 1.6s ease;
+    animation-fill-mode: forwards;
+}
+/****************************************init****************************************/
+/* .g-focus .m-t, .g-focus .m-c, .g-focus .m-f, .g-teacher .m-t, .g-teacher .m-c .y-t, .g-teacher .m-c .y-c, .g-teacher .m-f, .g-student .m-t, .g-student .m-c, .g-student .m-f, .g-class .m-t, .g-class .m-c li, .g-high .m-t, .g-high .m-c, .g-high .s-bg, .g-about .m-t, .g-about .m-c .f-l, .g-about .m-c .f-r, .g-ad, .g-environment .m-t,.g-jg ul li, .g-environment .m-f, .g-consult .m-t, .g-consult .m-c ul li {
+    opacity: 0;
+}
+ */
